@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SİNJA WEB</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; /* Sayfadaki kaydırmayı devre dışı bırak */
+      }
+
+      .image {
+        position: relative;
+        flex: 1;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        cursor: pointer;
+        opacity: 0.9;
+      }
+
+      .image:hover {
+        transform: scale(1.05);
+        opacity: 0.6;
+      }
+
+      .image a {
+        display: block;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      span {
+        position: absolute;
+        bottom: calc(15% + 30px);
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        z-index: 2;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER SECTİON STARTS -->
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img src="./images/logo.jpg" alt="logo" />
+        <h3>SİNJA</h3>
+      </a>
+
+      <nav class="navbar">
+        <ul class="list">
+          <li><a href="index.html" id="secili">ANA SAYFA</a></li>
+          <li><a href="yemekler.html">YEMEKLER</a></li>
+          <li><a href="yerler.html">YERLER</a></li>
+          <li><a href="icecekler.html">İÇECEKLER</a></li>
+          <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
+          <li><a href="iletisim.html">İLETİŞİM</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- HEADER SECTİON END -->
+
+    <!-- CONTECT SECTİON START -->
+
+    <section>
+      <div
+        class="container"
+        style="height: 100vh; display: flex; flex-direction: row"
+      >
+        <div class="image" style="background-image: url('./images/yemek.jpg')">
+          <a href="yemekler.html">
+            <span>YEMEKLER</span>
+          </a>
+        </div>
+        <div class="image" style="background-image: url('./images/galata.jpg')">
+          <a href="yerler.html">
+            <span>YERLER</span>
+          </a>
+        </div>
+        <div class="image" style="background-image: url('./images/icecek.jpg')">
+          <a href="icecekler.html">
+            <span>İÇECEKLER</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTECT SECTİON END -->
+  </body>
+</html>
